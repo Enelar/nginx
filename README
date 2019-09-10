@@ -1,0 +1,7 @@
+docker run -p 80:80 -v $YOURDIR:/usr/share/nginx/html enelar/nginx
+
+To add sh and stuff rebuild with:
+
+COPY --from=build /bin /bin
+COPY --from=build /sbin /sbin
+COPY --from=build /lib /lib
